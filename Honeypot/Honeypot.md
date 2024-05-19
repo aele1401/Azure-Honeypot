@@ -6,8 +6,8 @@ This project utilizes Azure and Sentinel for a low-interaction honeypot project 
   * Research and analysis: data collected from honeypots are analyzed to gain insights into the latest threats and attack patterns. This information is crucial for developing better defensive strategies and improving cybersecurity protocols.
 
 Types of Honeypots:
-  * Low-Interaction Honeypots: Simulate only basic services and are primarily used to collect information about automated attacks like worms or bots. They are easier to set up and manage but provide limited interaction data.
-  * High-Interaction Honeypots: Fully functional systems that provide a real operating environment for attackers. They offer deeper insights but come with higher risks and require more resources to maintain.
+  * Low-Interaction Honeypots: simulate only basic services and are primarily used to collect information about automated attacks like worms or bots. They are easier to set up and manage but provide limited interaction data.
+  * High-Interaction Honeypots: fully functional systems that provide a real operating environment for attackers. They offer deeper insights but come with higher risks and require more resources to maintain.
 
   ## Azure Deployment
   ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/network_diagram.png)
