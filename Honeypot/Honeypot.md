@@ -15,14 +15,14 @@ Types of Honeypots:
   ## VM Configuration & Deployment
 
   Setup and configure VM with:
-    * Resource group
-    * VM name
-    * Region
-    * Availability & Redundancy
-    * Security Type
-    * Image
-    * Size
-    * Username & Password
+    - Resource group
+    - VM name
+    - Region
+    - Availability & Redundancy
+    - Security Type
+    - Image
+    - Size
+    - Username & Password
 
     |     Name    |    Function  |   IP Address   |  Operating System |
     |-------------|--------------|----------------|-------------------|
