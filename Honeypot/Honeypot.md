@@ -105,7 +105,7 @@ We can see most of the attacks are coming in from Russia. To migitate this attac
   * User Education and Training: Train users on recognizing phishing attempts and using strong, unique passwords for their accounts.
   * Access Control: Implement the principle of least privilege by restricting access rights for users to only what is necessary for their role.
 
-![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/example_confug.png)
+![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/example_config.png)
 
 
   
