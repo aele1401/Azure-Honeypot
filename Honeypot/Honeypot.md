@@ -40,7 +40,7 @@ Types of Honeypots:
     |-------------|---------------------|----------------------|
     | Honeypot-vm |         Yes         |        All           |
 
-    ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/firewall_rule.png)
+   ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/firewall_rule.png)
 
   ## Log Analytics Workspace
 
