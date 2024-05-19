@@ -104,6 +104,7 @@ We can see most of the attacks are coming in from Russia. To migitate this attac
   * Regular Updates and Patching: Regularly update and patch your systems and applications to protect against known vulnerabilities that can be exploited during brute force attacks.
   * User Education and Training: Train users on recognizing phishing attempts and using strong, unique passwords for their accounts.
   * Access Control: Implement the principle of least privilege by restricting access rights for users to only what is necessary for their role.
+- Here's an example of blocking IPs from a specific country using iptables as a defense in depth concept:
 
 ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/example_config.png)
 
