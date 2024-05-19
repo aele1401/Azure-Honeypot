@@ -13,22 +13,23 @@ Types of Honeypots:
   ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/network_diagram.png)
 
   ## VM Configuration & Deployment
-
+  
   Setup and configure VM with:
-    - Resource group
-    - VM name
-    - Region
-    - Availability & Redundancy
-    - Security Type
-    - Image
-    - Size
-    - Username & Password
+   - Resource group
+   - VM name
+   - Region
+   - Availability & Redundancy
+   - Security Type
+   - Image
+   - Size
+   - Username & Password
+    
 
     |     Name    |    Function  |   IP Address   |  Operating System |
     |-------------|--------------|----------------|-------------------|
     | Honeypot-vm |     Decoy    |  52.148.128.89 |     Windows 10    |
 
-    ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/vm_creation.png)
+   ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/vm_creation.png)
   
   Access Policies & Firewall Rules:
     * Create a network security group.
