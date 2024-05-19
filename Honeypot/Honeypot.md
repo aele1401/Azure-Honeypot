@@ -27,7 +27,7 @@ Types of Honeypots:
 
     |     Name    |    Function  |   IP Address   |  Operating System |
     |-------------|--------------|----------------|-------------------|
-    | Honeypot-vm |     Decoy    |  52.148.128.89 |     Windows 10    |
+    | Honeypot-vm |     Decoy    |  00.000.000.00 |     Windows 10    |
 
    ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/vm_creation.png)
   
