@@ -1,4 +1,4 @@
-# Azure-Sentinel
+# Azure Sentinel
 
 This project utilizes Azure and Sentinel for a low-interaction honeypot project designed to attract, detect, and analyze malicious activities by setting up a decoy system and network resource. This decoy mimics a vulnerable server exposed to the public internet, to lure attackers and study their methods and behavior. Here are the key aspects of this project:
   * Setting up decoy system: this is the configuration and deployment of systems and resources intentionally made to appear as appealing targets for cyber attackers. This can be servers, databases, IoT devices, or any other networked device.
