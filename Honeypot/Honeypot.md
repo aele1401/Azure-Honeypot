@@ -87,10 +87,10 @@ Types of Honeypots:
 
 We can see most of the attacks are coming in from Russia. To migitate this attack, we can implement:
 - Network-Based Mitigations:
-  * Geo-blocking: IP Blocking by Region: configure your firewall or web server to block IP addresses from specific countries known for the attacks. This can be done using tools like iptables, firewalld, or cloud-based solutions like Cloudflare.
-  * Rate Limiting: Limit Login Attempts: implement rate limiting on login endpoints to restrict the number of login attempts from a single IP address within a certain time frame.
-  * Intrusion Detection and Prevention Systems (IDPS): use an IDPS to detect and block suspicious activities in real-time. Tools like Snort, Suricata, or cloud-based solutions can help monitor and prevent brute force attempts.
-  * Traffic Filtering: use a WAF to filter and monitor HTTP requests and block malicious traffic. Cloud-based WAF services (e.g., AWS WAF, Azure WAF) are highly effective.
+  * Geo-blocking: We can IP block by region by configuring firewalls or web servers to block IP addresses from specific countries known for attacks. This can be done using tools like iptables, firewalld, or cloud-based solutions like Cloudflare.
+  * Rate Limiting: Limit login attempts by implementing rate limiting on login endpoints to restrict the number of login attempts from a single IP address within a certain time frame.
+  * Intrusion Detection and Prevention Systems (IDPS): Use an IDPS to detect and block suspicious activities in real-time. Tools like Snort, Suricata, or cloud-based solutions can help monitor and prevent brute force attempts.
+  * Traffic Filtering: Use a WAF to filter and monitor HTTP requests and block malicious traffic. Cloud-based WAF services (e.g., AWS WAF, Azure WAF) are highly effective.
 - Application-Based Mitigations:
   * Strong Authentication:
    - Multi-Factor Authentication (MFA): Require MFA for all user accounts to add an additional layer of security beyond just passwords.
