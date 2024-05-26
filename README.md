@@ -1,1 +1,0 @@
-This repository features a honeypot project that includes the creation and deployment of a virtual lab and a SIEM using Azure and PowerShell.
