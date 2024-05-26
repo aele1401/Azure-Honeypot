@@ -1,7 +1,7 @@
 # Azure Sentinel
 
 This project utilizes Azure resources and Sentinel for a low-interaction honeypot designed to attract, detect, and analyze malicious activities by setting up a decoy system and network resource. This decoy mimics a vulnerable server exposed to the public internet, to lure attackers and study their methods and behavior. Here are the key aspects of this project:
-  * Setting up decoy system: this is the configuration and deployment of systems and resources intentionally made to appear as appealing targets for cyber attackers. This can be servers, databases, IoT devices, or any other networked device.
+  * Setting up decoy system: this is the configuration and deployment of systems and resources intentionally made to appear as appealing targets for cyber attackers. This can also be servers, databases, IoT devices, or any other networked device.
   * Monitoring and logging: honeypots are equipped with extensive monitoring tools to log all interactions. This helps cybersecurity experts understand attack vectors, methods, tools, and behaviors of the attackers.
   * Research and analysis: data collected from honeypots are analyzed to gain insights into the latest threats and attack patterns. This information is crucial for developing better defensive strategies and improving cybersecurity protocols.
 
@@ -33,7 +33,7 @@ Types of Honeypots:
   
   Access Policies & Firewall Rules:
    * Create a network security group.
-   * Delete the defaults.
+   * Delete the defaults because we want to expose this machine to the public.
    * Create a new inbound rule allowing any source, port range, destination, protocol, and low priority of 100 to expose the machine to the public internet.
 
     |     Name    | Publicly Accessible | Allowed IP Addresses |
@@ -51,20 +51,20 @@ Types of Honeypots:
     
   * Connect the Log Analytics Workspace to the VM.
   
-  ## Sentinel
+  ## Azure Sentinel
 
-  * Setting up Azure Sentiinel:
+  * Setting up Azure Sentinel:
     - Create Azure Sentinel Workspace and connect it to the Log Analytics Workspace.
     - Log into the honeypot VM using the public IP and remote desktop.
     - Observe events in Windows Event Viewer:
       * Test Event Viewer with an incorrect login to honeypot VM to ensure everything is working.
     - Disabling Windows Firewall to open VM to traffic:
       * Test the machine by pinging its IP address with `ping [public IP of your machine] -t` which should timeout. This indicates the Windows firewall is enabled.
-      * Disable firewall by going to Windows Defender Firewall Properties and turning off Domain, Public, and Private profile firewalls. You should be able to continously ping the VM.
+      * Disable firewall by going to Windows Defender Firewall Properties and turning off Domain, Public, and Private profile firewalls. You should be able to continuously ping the VM.
         
       ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/disable_fw.png)
       
-    - Download the Custom Log Exporter PowerShell file and open it in PowerShell ISE on the honeypot VM.
+    - Download the Custom Log Exporter PowerShell file (failed_logins_script.ps1 file) and open it in PowerShell ISE on the honeypot VM.
       
     ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/cle.png)
 
