@@ -85,7 +85,7 @@ Types of Honeypots:
 
      ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/final_map.png)
 
-We can see most of the attacks are coming in from Russia. To migitate this attack, we can:
+We can see most of the attacks are coming in from Russia. To migitate this attack, we can implement:
 - Network-Based Mitigations:
   * Geo-blocking: IP Blocking by Region: configure your firewall or web server to block IP addresses from specific countries known for the attacks. This can be done using tools like iptables, firewalld, or cloud-based solutions like Cloudflare.
   * Rate Limiting: Limit Login Attempts: implement rate limiting on login endpoints to restrict the number of login attempts from a single IP address within a certain time frame.
