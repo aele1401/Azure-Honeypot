@@ -58,6 +58,8 @@ Types of Honeypots:
     - Log into the honeypot VM using the public IP and remote desktop.
     - Observe events in Windows Event Viewer:
       * Test Event Viewer with an incorrect login to honeypot VM to ensure everything is working.
+      ![Diagram](https://github.com/aele1401/Azure-Honeypot/blob/main/Images/eventviewer.png)
+      ![Diagram](https://github.com/aele1401/Azure-Honeypot/blob/main/Images/eventviewer_failed_login.png)
     - Disabling Windows Firewall to open VM to traffic:
       * Test the machine by pinging its IP address with `ping [public IP of your machine] -t` which should timeout. This indicates the Windows firewall is enabled.
       * Disable firewall by going to Windows Defender Firewall Properties and turning off Domain, Public, and Private profile firewalls. You should be able to continuously ping the VM.
