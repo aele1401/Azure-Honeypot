@@ -84,7 +84,7 @@ Types of Honeypots:
       
     - Download the Custom Log Exporter PowerShell file (failed_logins_script.ps1 file) and open it in PowerShell ISE on the honeypot VM.
     - In the PowerShell script, a filter will be used to filter failed RDP events from Windows Event Viewer.
-    - In Windows Event Viewer, Event ID 4625 is a logon failure so a query for 4625 will be created. Included is a function that creates a bunch of sample log files that will be used to train the Extract feature in Log Analytics workspace. If you don't have enough log files to "train" it, it will fail to extract certain fields for some reason -_-. We can avoid including these fake records on our map by filtering out all logs with a destination host of "samplehost." Script also includes an infinite loop that keeps checking the Event Viewer logs.
+    - In Windows Event Viewer, Event ID 4625 correlates to a logon failure so a query for 4625 will be created. Included is a function that creates a bunch of sample log files that will be used to train the Extract feature in Log Analytics workspace. If you don't have enough log files to "train" it, it will fail to extract certain fields for some reason -_-. We can avoid including these fake records on our map by filtering out all logs with a destination host of "samplehost." Script also includes an infinite loop that keeps checking the Event Viewer logs.
       
     ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/cle.png)
 
