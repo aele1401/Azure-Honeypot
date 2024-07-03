@@ -113,8 +113,8 @@ We can see most of the attacks are coming in from Russia. To migitate this attac
   * Traffic Filtering: Use a WAF to filter and monitor HTTP requests and block malicious traffic. Cloud-based WAF services (e.g., AWS WAF, Azure WAF) are highly effective.
 - Application-Based Mitigations:
   * Strong Authentication:
-   - Multi-Factor Authentication (MFA): Require MFA for all user accounts to add an additional layer of security beyond just passwords.
-   - Complex Password Policies: Enforce strong password policies requiring complex passwords that are harder to guess or crack.
+    - Multi-Factor Authentication (MFA): Require MFA for all user accounts to add an additional layer of security beyond just passwords.
+    - Complex Password Policies: Enforce strong password policies requiring complex passwords that are harder to guess or crack.
   * Account Lockout Mechanisms: Implement temporary account lockout mechanisms after a set number of failed login attempts. Ensure this period is long enough to slow down brute force attacks but short enough to avoid user inconvenience.
   * Captcha: Add CAPTCHA challenges to login forms to differentiate between automated bots and legitimate users.
 - Monitoring & Response:
