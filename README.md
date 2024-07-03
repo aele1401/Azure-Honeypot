@@ -118,7 +118,8 @@ We can see most of the attacks are coming in from Russia. To migitate this attac
   * Account Lockout Mechanisms: Implement temporary account lockout mechanisms after a set number of failed login attempts. Ensure this period is long enough to slow down brute force attacks but short enough to avoid user inconvenience.
   * Captcha: Add CAPTCHA challenges to login forms to differentiate between automated bots and legitimate users.
 - Monitoring & Response:
-  * Log Monitoring: Real-time Log Analysis: Continuously monitor logs for unusual activity and failed login attempts. Use SIEM (Security Information and Event Management) systems like Splunk or ELK Stack for centralized log management and analysis.
+  * Log Monitoring:
+    - Real-time Log Analysis: Continuously monitor logs for unusual activity and failed login attempts. Use SIEM (Security Information and Event Management) systems like Splunk or ELK Stack for centralized log management and analysis.
   * Alerting and Notifications: Configure alerts for abnormal login patterns or repeated failed login attempts. Ensure your IT team is notified immediately to respond to potential threats.
 - Best Practices:
   * Regular Updates and Patching: Regularly update and patch your systems and applications to protect against known vulnerabilities that can be exploited during brute force attacks.
