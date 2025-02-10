@@ -1,4 +1,4 @@
-# Azure Honeypot Project
+# Azure Honeypot Deployment
 
 ## Description
 This project implements a honeypot on Azure to detect and analyze potential cyber threats. It is designed to attract attackers and log their activities for further analysis.
@@ -58,27 +58,29 @@ Types of Honeypots:
 
    ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/firewall_rule.png)
 
-  ## Log Analytics Workspace
-
-  * Enabling Log Collection in Security Center:
-    - Create a Log Analytics Workspace to ingest VM logs and enable collection.
-      
-    ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/law_creation.png)
-    
-  * Connect the Log Analytics Workspace to the VM.
+  ## Log Analytics Workspace - Enabling Log Collection in Security Center
   
-  ## Azure Sentinel
+  Create a Log Analytics Workspace to ingest VM logs, enable collection, and connect it to the VM:
+  
+  ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/law_creation.png)    
+
+  ## Deploying Azure Sentinel
 
   * Setting up Azure Sentinel:
     - Create Azure Sentinel Workspace and connect it to the Log Analytics Workspace.
     - Log into the honeypot VM using the public IP and remote desktop.
-    - Observe events in Windows Event Viewer:
-      * Test Event Viewer with an incorrect login to honeypot VM to ensure everything is working.
+    - Observe the various events in Windows Event Viewer:
+      * Test Event Viewer logs with an incorrect login to honeypot VM to ensure everything is working:
+        
       ![Diagram](https://github.com/aele1401/Azure-Honeypot/blob/main/Images/eventviewer.png)
       ![Diagram](https://github.com/aele1401/Azure-Honeypot/blob/main/Images/eventviewer_failed_login.png)
+      
     - Disabling Windows Firewall to open VM to traffic:
-      * Test the machine by pinging its IP address with `ping [public IP of your machine] -t` which should timeout. This indicates the Windows firewall is enabled.
+      * Test the machine by pinging its IP address with `ping [public IP of your machine] -t` which should timeout.
+      * If pinging times out, this indicates the Windows firewall is enabled and will have to be disabled to expose the machine to the public internet.
       * Disable firewall by going to Windows Defender Firewall Properties and turning off Domain, Public, and Private profile firewalls. You should be able to continuously ping the VM.
+      * `netsh advfirewall show allprofiles` to show firewall status.
+      * `netsh advfirewall set allprofiles state off` to set all firewall profiles off.
         
       ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/disable_fw.png)
       
