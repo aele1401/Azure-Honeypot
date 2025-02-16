@@ -32,7 +32,7 @@ Types of Honeypots:
   ## Azure Deployment
   ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/network_diagram.png)
 
-  ## Step 1 - VM Configuration & Deployment + Access Policies & Firewall Rules
+  ## VM Configuration & Deployment + Access Policies & Firewall Rules
   
   Login to Azure account. Setup and configure VM with:
    - Resource group: `HoneypotProject`
@@ -69,13 +69,13 @@ Types of Honeypots:
 
    ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/firewall_rule.png)
 
-  ## Step 2: Log Analytics Workspace - Enabling Log Collection in Security Center
+  ## Log Analytics Workspace - Enabling Log Collection in Security Center
   
   Create a Log Analytics Workspace to ingest VM logs, enable collection, and connect it to the VM:
   
   ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/law_creation.png)    
 
-  ## Step 3: Setting Up Azure Sentinel w/ Log Analytics Workspace & Windows Logs
+  ## Setting Up Azure Sentinel w/ Log Analytics Workspace & Windows Logs
 
   * Setting up Azure Sentinel:
     - Create Azure Sentinel Workspace and connect it to the Log Analytics Workspace.
@@ -87,7 +87,7 @@ Types of Honeypots:
       ![Diagram](https://github.com/aele1401/Azure-Honeypot/blob/main/Images/eventviewer_failed_login.png)
       
  
-    ## Step 4: Disabling Local Firewalls & VM Traffic Configuration 
+    ## Disabling Local Firewalls & VM Traffic Configuration 
     - Disabling Windows Firewall to open VM to traffic:
       * Test the machine by pinging its IP address with `ping [public IP of your machine] -t` which should timeout.
       * If pinging times out, this indicates the Windows firewall is enabled and will have to be disabled to expose the machine to the public internet.
@@ -97,7 +97,7 @@ Types of Honeypots:
         
       ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/disable_fw.png)
       
-    ## Step 5: Integrating PowerShell Transform Logs w/ Log Analytics & Sentinel 
+    ## Integrating PowerShell Transform Logs w/ Log Analytics & Sentinel 
     - Download the Custom Log Exporter PowerShell file, [failed_logins_script.ps1](https://github.com/aele1401/Azure-Honeypot/blob/main/Scripts/failed_logins_script.ps1) file, and open it in PowerShell ISE on the honeypot VM.
     - In the PowerShell script, a filter will be used to filter failed RDP events from Windows Event Viewer.
     - In Windows Event Viewer, Event ID 4625 correlates to a logon failure so a query for 4625 will be created. Included is a function that creates a bunch of sample log files that will be used to train the Extract feature in Log Analytics workspace. If you don't have enough log files to "train" it, it will fail to extract certain fields for some reason -_-. We can avoid including these fake records on our map by filtering out all logs with a destination host of "samplehost." Script also includes an infinite loop that keeps checking the Event Viewer logs.
@@ -109,7 +109,7 @@ Types of Honeypots:
 
      ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/ps_script.png)
     
-    ## Step 6: Creating Custom Logs, Querying w/ KQL, and Heat Map
+    ## Creating Custom Logs, Querying w/ KQL, and Heat Map
     - Create a custom log in Log Analytics Workspace to bring in the custom log that includes the geodata that's collected:
       * When creating the custom log, upload a copy of the log file (ps1 file in honeypot VM), to help train Log Analytics what to look for in the log files.
     - Test the custom log by running it in LAW. You should see log entries populate.
