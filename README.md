@@ -118,7 +118,7 @@ Types of Honeypots:
     - Extract and parse the raw data into fields like IP Address, Destination Host, and so forth.
     - To extract and parse the data, open Azure Sentinel and add the created query above include map as visualization and adjust settings and parameters accordingly.
   * Examining Attacks in Azure Sentinel:
-    - After setting up Azure Sentinel with the custom logs and query, you should be able to see live attacks from around the world. The longer the VM is exposed the more discoverable it is and the more attackers who will attempt a brute force attack.
+    - After setting up Azure Sentinel with the custom logs, query, and map, you should be able to see live attacks from around the world. The longer the VM is exposed the more discoverable it is and the more attackers who will attempt a brute force attack.
 
      ![Diagram](https://github.com/aele1401/Azure-Sentinel/blob/main/Images/final_map.png)
 
