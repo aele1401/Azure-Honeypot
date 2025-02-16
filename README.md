@@ -112,7 +112,7 @@ Types of Honeypots:
     ## Creating Custom Logs, Querying w/ KQL, and Heat Map
     - Create a custom log in Log Analytics Workspace to bring in the custom log that includes the geodata that's collected:
       * When creating the custom log, upload a copy of the log file (ps1 file in honeypot VM), to help train Log Analytics what to look for in the log files.
-    - Test the custom log by running it in LAW. You should see log entries populate.
+    - Test the custom log by running it in Log Analytics Workspace. You should see log entries populate.
     - You can query the logs using KQL
     - Looking at the logs, we can see the raw data as an output.
     - Extract and parse the raw data into fields like IP Address, Destination Host, and so forth.
